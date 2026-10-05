@@ -1,0 +1,32 @@
+
+ITEM{
+id_item (PK),nome,preço, peso, volume
+}
+ITEM_MAGICO{
+id_item (PK, FK → ITEM), efeito
+}
+ITEM_INVENTARIO{
+id_item (PK, FK → ITEM),capacidade peso,
+capacidade_volume
+}
+ITEM_ARMA{
+id_item (PK, FK → ITEM),
+classe,dano
+}
+MUNDO{
+id_mundo (PK),nome,descrição
+}
+PAGINA{
+id_pagina (PK),título,descrição,
+id_mundo (FK → MUNDO)}
+
+PERSONAGEM{
+id_personagem (PK),nome,
+idade,peso_suportado,
+profissão, cultura,
+data criação, id_mundo (FK → MUNDO), itens
+}
+HABILIDADE{
+id_habilidade (PK),nome,
+id_personagem (FK → PERSONAGEM)
+}

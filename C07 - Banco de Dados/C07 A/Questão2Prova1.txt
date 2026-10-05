@@ -1,0 +1,20 @@
+MESTRE{
+id_mestre(PK, FK → HABILIDADES,JOGADOR),nome, email, senha, whatsapp
+}
+
+JOGADOR{
+id_jogador(PK, FK → Personagem), nome, senha, email, id_mestre(FK)
+}
+
+HABILIDADE{
+id_habilidade(PK),atributo_base, descricao,
+id_mestre(FK),id_bonus(FK)
+}
+
+PERSONAGEM{
+id_personagem(PK),nome, idade, profissao, cultura, id_jogador(FK), id_bonus(FK)
+}
+
+BONUS{
+id_bonus(PK, FK→PERSONAGEM, HABILIDADE)
+}

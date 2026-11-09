@@ -2,7 +2,7 @@ USE laboratorio;
 
 DROP TABLE IF EXISTS investigacao;
 	
-CREATE TABLE IF NOT EXISTS investigacao (
+	CREATE TABLE IF NOT EXISTS investigacao (
 id INT AUTO_INCREMENT PRIMARY KEY,
 nome VARCHAR(100),
 idade INT,
